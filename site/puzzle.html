@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		var score = 0;
+
+		function checkAnswer(inputId, answers){
+			var userAnswer = document.getElementById(inputId).value;
+			userAnswer = userAnswer.toLowerCase();
+			for(var i = 0; i < answers.length; i++){
+				if(userAnswer == answers){
+					score++;
+					break;
+				}
+			}
+		}
+
+		function checkAnswers() {
+
+			checkAnswer("userAnswer1", "утюг");
+			checkAnswer("userAnswer2", "чайник");
+			checkAnswer("userAnswer3", "год");
+      checkAnswer("userAnswer4", "водопровод");
+
+			alert("Вы отгадали " + score + " загадок");
+
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="#">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="password.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Игра в загадки</h1>
+
+			<div class="box">
+
+				<p><br>В Полотняной стране </br>
+          <br>По реке Простыне </br>
+          <br> Плывет пароход </br>
+          <br>То назад, то вперед, </br>
+          <br>А за ним такая гладь — </br>
+          <br> Ни морщинки не видать.</br>
+				<input type="text" id="userAnswer1">
+
+				<p><br>В брюшке — баня, </br>
+          <br>В носу — решето, </br>
+          <br>Нос — хоботок, </br>
+          <br>На голове — пупок, </br>
+          <br>Всего одна рука </br>
+          <br>Без пальчиков, </br>
+          <br>И та — на спине </br>
+          <br>Калачиком.</br></p>
+				<input type="text" id="userAnswer2">
+
+				<p><br>Стоит дуб, </br>
+          <br> В нем двенадцать гнезд, </br>
+          <br>В каждом гнезде </br>
+          <br>По четыре яйца, </br>
+          <br>По семи цыпленков.</br></p>
+				<input type="text" id="userAnswer3">
+
+        <p><br>Речка спятила с ума — </br>
+          <br>По домам пошла сама.</br></p>
+				<input type="text" id="userAnswer4">
+
+				<br>
+				<a href="#" onClick="checkAnswers();">Ответить</a>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<div class="footer">
+	Copyright &copy; Khaliavin Semen
+<div>
+
+
+</body>
+</html>
